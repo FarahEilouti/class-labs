@@ -1,15 +1,15 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import image1 from "./pics/unicorn3.jpg";
-import image2 from "./pics/unicorn1.jpg";
+import data from './data.json';
+import './style.css';
+let HornedB = data.map(element => <HornedBeast id = {element._id} title = {element.title} img = {element.image_url}/>)
 
 class Main extends React.Component{
-    render(){
+    render(){  
         return(
-            <div>
-               <HornedBeast title = 'unicorn 1' description = 'this is an image of a horned animal' img = {image1} />
-               <HornedBeast title = 'unicorn 2' description = 'this is an other image of a horned animal' img = {image2} />
-               
+
+            <div id='allCards'>
+               {HornedB}
             </div>
         )
     }
