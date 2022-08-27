@@ -1,7 +1,6 @@
-import { Button } from "bootstrap";
 import React from "react";
 import Card from "react-bootstrap/Card";
-// import Button from "react-bootstrap/Button";
+import Button from "react-bootstrap/Button";
 
 
 class HornedBeast extends React.Component{
@@ -23,7 +22,7 @@ class HornedBeast extends React.Component{
         return (
         <div id="card">
             <Card>
-                <Card.Img src = {this.props.img} onClick = {this.incrementLikes}/>
+                <Card.Img src = {this.props.img} onClick = {this.incrementLikes}  />
 
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
@@ -31,7 +30,7 @@ class HornedBeast extends React.Component{
                     <Card.Text>Likes : {this.state.likes}❤️</Card.Text>
                 </Card.Body>
 
-                <button variant = "info">press on picture</button>
+                <Button variant = "info" onClick = {()=>{this.props.myFunction(this.props.title)}} >press on picture</Button>
                 
             </Card>
         </div>
