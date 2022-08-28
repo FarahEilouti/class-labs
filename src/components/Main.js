@@ -13,7 +13,8 @@ class Main extends React.Component{
                 <HornedBeast
                 id = {element._id} 
                 title = {element.title} 
-                img = {element.image_url} 
+                img = {element.image_url}
+                horns = {element.horns} 
                 description = {element.description} 
                 myFunction = {this.props.myFunction}/>)
 }         

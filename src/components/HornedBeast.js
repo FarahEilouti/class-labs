@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-
+import data from "./data.json"
 
 class HornedBeast extends React.Component{
 
@@ -28,6 +28,7 @@ class HornedBeast extends React.Component{
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Text>{this.props.description}</Card.Text>
                     <Card.Text>Likes : {this.state.likes}❤️</Card.Text>
+                    <Card.Text>horns: {this.props.horns}</Card.Text>
                 </Card.Body>
 
                 <Button variant = "info" onClick = {()=>{this.props.myFunction(this.props.title)}} >press on picture</Button>
